@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Registration</string>
+    <string name="title">Rejestruj konto</string>
+    <string name="emailTitle">Podaj e-mail</string>
+    <string name="passTitle">Podaj hasło</string>
+    <string name="repPassTitle">Powtórz hasło</string>
+    <string name="confirmText">Zatwierdź</string>
+    <string name="info">Autor: Jakub Maciaszczyk</string>
+    <string name="emailHint">email</string>
+    <string name="passHint">hasło</string>
+    <string name="repPassHint">powtórzone hasło</string>
+</resources>
