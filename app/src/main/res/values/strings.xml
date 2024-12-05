@@ -5,7 +5,7 @@
     <string name="passTitle">Podaj hasło</string>
     <string name="repPassTitle">Powtórz hasło</string>
     <string name="confirmText">Zatwierdź</string>
-    <string name="info">Autor: Jakub Maciaszczyk</string>
+    <string name="info">%1$s</string>
     <string name="emailHint">email</string>
     <string name="passHint">hasło</string>
     <string name="repPassHint">powtórzone hasło</string>

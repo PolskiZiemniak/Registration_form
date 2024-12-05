@@ -1,7 +1,7 @@
 package com.example.registration;
 
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText repeatPassField;
     private Button confirm;
     private TextView info;
+    private Resources res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,22 +28,24 @@ public class MainActivity extends AppCompatActivity {
         repeatPassField = findViewById(R.id.repeatPassword);
         confirm = findViewById(R.id.confirm);
         info = findViewById(R.id.info);
+        res = getResources();
 
-        confirm.setOnClickListener(view -> {
-            validation();
-        });
+        String infoText = res.getString(R.string.info, "Autor: Jakub Maciaszczyk");
+        info.setText(infoText);
 
+        confirm.setOnClickListener(view -> validation());
     }
 
     public void validation(){
         if(!emailField.getText().toString().contains("@")){
-            info.setText("Nieprawidłowy adres e-mail");
+            String infoText = res.getString(R.string.info, "Nieprawidłowy adres e-mail");
+            info.setText(infoText);
         }else if(!passField.getText().toString().equals(repeatPassField.getText().toString())){
-            Log.d("myTag", passField.getText().toString());
-            Log.d("myTag", repeatPassField.getText().toString());
-            info.setText("Hasła się różnią");
+            String infoText = res.getString(R.string.info, "Hasła się różnią");
+            info.setText(infoText);
         }else{
-            info.setText("Witaj " + emailField.getText());
+            String infoText = res.getString(R.string.info, "Witaj " + emailField.getText());
+            info.setText(infoText);
         }
     }
 }
